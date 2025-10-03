@@ -1,0 +1,514 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    position: sticky;
+    top: 0;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    height: 100%;
+    color: white;
+    font-family: 'Sen', sans-serif;
+}
+
+.logo-image.active {
+    width: 50px; 
+    height: 50px;
+    object-fit: cover; 
+    border-radius: 50%; 
+    font-weight: bold;
+   
+}
+
+.logo-text-container {
+    margin-left: 0 5px;
+    
+}
+
+.logo-text {
+    font-size: 30px;
+     display: flex;
+    list-style: none;
+    align-items: center;
+    
+    
+}
+
+.menu-container {
+    flex: 6;
+}
+
+.menu-list {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    padding:10%;
+}
+
+.menu-list-item {
+    margin-right: 5%;
+    position: relative;
+}
+.menu-list-item a {
+    color: inherit;       /* Mengambil warna teks dari elemen <li> induk */
+    text-decoration: none;
+}
+
+.menu-list-item.active {
+    font-weight: bold;
+}
+
+.profile-container {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px; /* Perbaikan: Menambahkan gap untuk jarak */
+}
+
+.profile-text-container {
+    display: flex;
+    align-items: center;
+}
+
+.profile-picture {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.toggle {
+    width: 40px;
+    height: 20px;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+.toggle-icon {
+    color: goldenrod;
+}
+
+.toggle-ball {
+    width: 18px;
+    height: 18px;
+    background-color: black;
+    position: absolute;
+    right: 1px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 1s ease all;
+}
+
+.container {
+    background-color: #151515;
+    color: white;
+}
+
+.content-container {
+  padding: 20px;
+  padding-top: 0;
+}
+
+.featured-content {
+    height: 65vh; 
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.featured-title {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.featured-desc {
+    width: 500px;
+    color: lightgray;
+    margin: 30px 0;
+}
+
+.featured-button {
+    background-color: rgb(83, 81, 81);
+    color: white;
+    padding-bottom: 10px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+.age-rating {
+    background-color:rgb(83, 81, 81);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 14px;}
+
+.featured-buttons button {
+    margin-right: 15px;
+    border: 10%;
+    padding: 10px;
+
+}
+
+.movie-list-container {
+    padding-top: 30px;
+}
+
+.movie-list-title {
+    font-size: 24px;
+    margin-bottom: 5px;
+    padding: 0 2;
+}
+
+.movie-list-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.movie-list {
+    display: flex;
+    align-items: center;
+    height: 300px;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+}
+.movie-list-item-lanjut {
+    margin-right: 20px;
+    position: relative;
+    background-color: black; /* Perbaikan: Latar belakang item film */;
+    width: 200px; 
+    height: 150px; 
+    border-radius: 20%;
+    
+    
+}
+.movie-list-item {
+    margin-right: 20px;
+    position: relative;
+    flex: 0 0;
+    background-color: black; /* Perbaikan: Latar belakang item film */;
+    width: 200px; 
+    height: 265px; 
+    border-radius: 20%;
+}
+.movie-rating {
+    display: flex;
+    position: relative; /* Mengatur ikon bintang dalam satu baris */
+    align-items: top; /* Meratakan secara vertikal */
+    margin-bottom: 10px; /* Memberi jarak dari judul */
+    color: gold; /* Mengubah warna bintang */
+    font-size: 10px; 
+    align-items: top;
+    left: 10px;
+    bottom: 20px;
+}
+    .movie-rating span {
+    margin-left: 5px; /* Memberi jarak antara bintang dan angka */
+    color: #fff; /* Warna teks rating */
+    font-weight: bold;
+    align-items: top;
+}
+.movie-list-item:hover .movie-list-item-img {
+    transform: scale(1.2);
+    margin: 0 20px;
+    opacity: 0.5;
+}
+.movie-list-item-lanjut:hover .movie-list-item-title,
+.movie-list-item-lanjut:hover .movie-list-item-desc,
+.movie-list-item-lanjut:hover .movie-list-item-button,
+.movie-list-item-lanjut:hover .movie-rating,
+.movie-list-item:hover .movie-list-item-title,
+.movie-list-item:hover .movie-list-item-desc,
+.movie-list-item:hover .movie-list-item-button {
+    opacity: 1;
+}
+.movie-list-item-img-lanjut {
+    transition: all 1s ease-in-out;
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.movie-list-item-img {
+    transition: all 1s ease-in-out;
+    width: 200px;
+    height: 265px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.movie-list-item-title {
+    background-color: #333;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+    left: 20px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+
+.movie-list-item-desc {
+    background-color: #333;
+    padding: 10px;
+    font-size: 10px;
+    position: absolute;
+    top: 30%;
+    left: 20px;
+    width: 150px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+
+.movie-list-item-button {
+    padding: 10px;
+    background-color: #4dbf00;
+    color: white;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 50px;
+    left: 80px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+
+.arrow {
+    font-size: 20px;
+    position: absolute;
+    top: 130px;
+    right: 0;
+    color: white;
+    opacity: 0.5;
+    cursor: pointer;
+    background-color: black; /* Latar belakang hitam transparan */
+    border-radius: 100%; /* Membuat bentuk lingkaran */
+    width: 20px; /* Lebar lingkaran (sesuaikan) */
+    height: 20px; /* Tinggi lingkaran (sesuaikan) */
+    display: flex; /* Menggunakan flexbox untuk memposisikan ikon di tengah */
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease; /* Transisi untuk hover */
+}
+
+.container.active {
+    background-color: white;
+}
+
+.movie-list-title.active {
+    color: black;
+}
+
+.navbar-container.active {
+    background-color: white;
+    color: black;
+}
+
+
+
+.left-menu-icon.active{
+    color: black;
+}
+
+.toggle.active {
+    background-color: black;
+}
+
+.toggle-ball.active {
+    background-color: white;
+    transform: translateX(-20px);
+}
+.footer {
+    width: 100%;
+    height: 300px;
+    background-color: black;
+    position: sticky;
+    top: 10;
+}
+.footer-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0px;
+}
+
+  .footer-image.active {
+      width: 150px; 
+      height: 150px;
+      object-fit: cover;  ;
+      color: white;
+      border: 5px;
+      border-radius: 50%;
+      border-color: white;
+      font-weight: bold;
+      border: 5px;
+      
+  }
+
+  .footer-text-container {
+      margin-left:70px;
+  }
+
+  .footer-text {
+      font-size: 70px;
+      color:white;
+      
+        
+    
+      
+  }
+
+.foot-menu-container {
+    flex: 0 10;
+}
+
+.foot-menu-genre {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    padding:100px;
+    padding-right: 100px;
+}
+.footer-column{
+  margin: 20px;
+}
+.footer-column h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    gap: 20px;
+}
+
+.genre-column .footer-list {
+    columns: 3;
+    -webkit-columns: 3;
+    -moz-columns: 3;
+}
+
+.footer-list li {
+    margin-bottom: 10px;
+    color: #999; /* Tambahkan warna teks agar terlihat */
+}
+
+/* Media Query untuk Responsif */
+@media only screen and (max-width: 768px) {
+    body, html {
+    margin: 0;
+    padding: 0;
+}
+    .logo-text-container,
+    .menu-container {
+        display: center;
+        justify-content: flex;
+        font-size: 10px;
+        padding: 0 5px;
+    }
+    .profile-container {
+        flex: 1;
+        justify-content: center;
+        margin-left: px;
+    }
+    .profile-text-container {
+        display: center;
+        font-size: 10px;
+        margin-left: 0 5px;
+        
+    }
+    .navbar-container {
+        padding: 0 10px;
+    }
+    .content-container {
+        padding: 15px;
+      }
+
+    .featured-content {
+        height: auto;
+        padding-bottom: 50px;
+    }
+    .featured-desc {
+        width: 100%;
+        margin: 20px 0;
+    }
+    .featured-buttons {
+        flex-direction: column; 
+        align-items: flex-start; 
+        gap: 15px;
+    }
+    .movie-list-container {
+        padding-top: 0; 
+
+    }
+    .movie-list-item {
+        margin-right: 5px;
+    }
+    .movie-list-item-img {
+        width: auto;
+        height: auto;
+    }
+    .movie-list-item-title,
+    .movie-list-item-desc,
+    .movie-list-item-button {
+        left: 20px;
+    }
+    .footer-container{
+    max-width: 100dvw; /* Sudut pandang 100% dari lebar layar */
+    background-color: black;
+    margin: 0; /* Hapus semua margin (atas, kanan, bawah, kiri) */
+}
+        
+        
+    
+    .footer-image.active{
+        padding: 0 50px;
+        right: 0;
+        width:50px;
+        height: 50px;
+        object-fit: cover; 
+    font-weight: bold;
+    }
+    
+    
+    .footer-text{
+        font-size: 30px;
+        display: flex;
+        object-fit: cover; 
+        list-style: none;
+        align-items: center;
+        padding-right: 200px;
+    }
+}

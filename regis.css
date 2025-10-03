@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+.bg-layar{
+    display: flex;
+    height: 100dvh;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-image: url(bg/one.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+
+    
+}
+   .form-content{
+    text-align: center;
+    padding: 20px 0;
+    color: white;
+   } 
+.image.active{
+    margin: 0 2px;
+    width: 20px;
+    height: 20px;
+    
+   
+    
+}
+.reg-container{
+    max-width: 700px;
+    width: 100%;
+    background: linear-gradient( to bottom, rgb(143, 114, 248), #e368c8);
+    padding: 20px 20px;
+    border-radius: 5px; 
+    
+    
+    
+
+}
+
+.image.active{
+    width: 25px; 
+    height: 25px;
+    object-fit: cover; 
+    border-radius: 50%;
+    text-align: center;
+    left: 50px;
+}
+.logo-text-container{
+    margin-left: 0 0;
+}
+.header-logo-wrapper{
+    width: 10px;
+    height: 10px;
+   font-size:20px;
+   padding: 20px 0;
+    color: rgb(255, 255, 255);
+    display: flex;
+    text-align: center;
+   
+  
+   
+}
+.container form .form-content{
+    display: flex;
+    flex-wrap: wrap;
+}
