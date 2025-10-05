@@ -24,7 +24,7 @@
     max-width: 700px;
     width: 100%;
     /* Menggabungkan semua properti reg-container di sini nih*/
-    background: linear-gradient( to bottom, rgb(26, 13, 74), #3c4449);
+    background: #181A1CD6;
     padding: 20px; /* Padding di sekitar konten */
     border-radius: 5px; 
   
@@ -102,8 +102,27 @@
     background-color: #5cb85c; 
     color: white;
 }
+.google{
+    width: 20px;
+    height: 20px;
+    margin-right:10px ;
+    
+}
 .google-login {
-    background-color: white; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    max-width: 400px; /* Batasan lebar agar terlihat rapi */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-left: 130px;
+    background-color: #181A1CD6; 
     color: #4285f4; 
     border: 1px solid #ddd;
 }
