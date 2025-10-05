@@ -1,72 +1,109 @@
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'poppins', sans-serif;
+    font-family: 'poppins', sans-serif; 
 }
+
+
 .bg-layar{
     display: flex;
-    height: 100dvh;
-    justify-content: center;
-    align-items: center;
+    height: 100dvh; /* Tinggi penuh viewport */
+    justify-content: center; /* Pusatkan horizontal */
+    align-items: center; /* Pusatkan vertikal */
     padding: 10px;
     background-image: url(bg/one.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    
+}
 
-    
-}
-   .form-content{
-    text-align: center;
-    padding: 20px 0;
-    color: white;
-   } 
-.image.active{
-    margin: 0 2px;
-    width: 20px;
-    height: 20px;
-    
-   
-    
-}
+
 .reg-container{
     max-width: 700px;
     width: 100%;
-    background: linear-gradient( to bottom, rgb(143, 114, 248), #e368c8);
-    padding: 20px 20px;
+    /* Menggabungkan semua properti reg-container di sini nih*/
+    background: linear-gradient( to bottom, rgb(26, 13, 74), #3c4449);
+    padding: 20px; /* Padding di sekitar konten */
     border-radius: 5px; 
-    
-    
-    
+  
+}
+
+/*Untuk memusatkan logo dan teks */
+.header-logo-wrapper{
+    /* Menggunakan Flexbox untuk memposisikan logo dan teks dalam satu baris */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 20px 0;
+    color: rgb(255, 255, 255);
 
 }
 
+/* Styling Logo */
 .image.active{
+    /* Menggabungkan semua deklarasi image.active yang berulang */
     width: 25px; 
     height: 25px;
     object-fit: cover; 
     border-radius: 50%;
-    text-align: center;
-    left: 50px;
-}
-.logo-text-container{
-    margin-left: 0 0;
-}
-.header-logo-wrapper{
-    width: 10px;
-    height: 10px;
-   font-size:20px;
-   padding: 20px 0;
-    color: rgb(255, 255, 255);
-    display: flex;
-    text-align: center;
-   
+    margin-right: 10px; 
   
-   
 }
-.container form .form-content{
+
+/* Styling Teks Logo */
+.logo-text{
+    font-size: 20px; 
+}
+
+/* Konten Formulir */
+.form-content{
+    text-align: center;
+    padding: 10px 0;
+    color: lightgray;
+} 
+
+
+.form-content .registration-form {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 15px; 
+}
+
+/* Untuk input field */
+.form-content .registration-form .input-field {
+    width: 100%; 
+    max-width: 400px; 
+    text-align: left;
+}
+
+.form-content .registration-form .input-field input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+
+.register-button, .google-login {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+.register-button {
+    background-color: #5cb85c; 
+    color: white;
+}
+.google-login {
+    background-color: white; 
+    color: #4285f4; 
+    border: 1px solid #ddd;
 }
