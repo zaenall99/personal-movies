@@ -1,0 +1,162 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif; 
+}
+
+
+.bg-layar{
+    display: flex;
+    height: 100dvh; /* Tinggi penuh viewport */
+    justify-content: center; /* Pusatkan horizontal */
+    align-items: center; /* Pusatkan vertikal */
+    padding: 10px;
+    background-image: url(bg/one.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.reg-container{
+    max-width: 700px;
+    width: 100%;
+    /* Menggabungkan semua properti reg-container di sini nih*/
+    background: #181A1CD6;
+    padding: 20px; /* Padding di sekitar konten */
+    border-radius: 5px; 
+  
+}
+
+/*Untuk memusatkan logo dan teks */
+.header-logo-wrapper{
+    /* Menggunakan Flexbox untuk memposisikan logo dan teks dalam satu baris */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 20px 0;
+    color: rgb(255, 255, 255);
+
+}
+
+/* Styling Logo */
+.image.active{
+    /* Menggabungkan semua deklarasi image.active yang berulang */
+    width: 25px; 
+    height: 25px;
+    object-fit: cover; 
+    border-radius: 50%;
+    margin-right: 10px; 
+  
+}
+
+/* Styling Teks Logo */
+.logo-text{
+    font-size: 20px; 
+    
+}
+
+/* Konten Formulir */
+.form-content{
+    text-align: center;
+    padding: 5px 0;
+    color: lightgray;
+} 
+.welcome-message{
+   
+    padding-bottom: 20px;
+}
+
+
+.form-content .registration-form {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 20px; 
+}
+
+/* Untuk input field */
+.form-content .registration-form .input-field {
+    width: 100%; 
+    max-width: 400px; 
+    text-align: left;
+}
+
+.form-content .registration-form .input-field input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: none;
+}
+.text-log{
+    font-size: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+
+}
+.atasnya{
+  padding-top: 10px; 
+
+
+}
+.atasnya a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+.bawahnya{
+    padding-top: 10px;
+    
+}
+.bawahnya a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+
+}
+
+.register-button, .google-login {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+.register-button {
+    background-color: #5cb85c; 
+    color: white;
+}
+.google{
+    width: 20px;
+    height: 20px;
+    margin-right:10px ;
+    
+}
+.google-login {
+    display: flex;
+    justify-content: center;
+   
+    padding: 10px;
+    width: 100%;
+    max-width: 400px; /* Batasan lebar agar terlihat rapi */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #181A1CD6; 
+    color: #4285f4; 
+    border: 1px solid #ddd;
+     align-items: center;
+}
