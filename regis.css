@@ -113,15 +113,14 @@
     justify-content: center;
     align-items: center;
     padding: 10px;
-    width: 100%;
     max-width: 400px; /* Batasan lebar agar terlihat rapi */
-    padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
     margin-top: 10px;
-    margin-left: 130px;
+    margin-left: auto;
+    margin-right: auto;
     background-color: #181A1CD6; 
     color: #4285f4; 
     border: 1px solid #ddd;
